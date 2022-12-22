@@ -1,6 +1,6 @@
-  // Set up the Tone.js context and synthesizer
-  const context = new Tone.Context();
-  const synth = new Tone.Synth().toDestination();
+// Set up the Tone.js context and synthesizer
+const context = new Tone.Context();
+const synth = new Tone.Synth().toDestination();
 
 //Load html (DOM) before running the js
 document.addEventListener("DOMContentLoaded", function() {
