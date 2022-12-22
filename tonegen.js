@@ -48,22 +48,6 @@ function generateMelody() {
   updatePianoRoll(melody);
 }
 
-// Save the melody to persistent storage
-function saveMelody() {
-  // Get the current values of the parameters
-  const key = keySelect.value;
-  const tempo = tempoInput.value;
-  // Save the melody to storage using the parameters
-  saveMelody(key, tempo);
-}
-
-// Function for generating a melody based on the given parameters
-function generateMelody(key, tempo) {
-  // Generate the melody using the key and tempo
-  // ...
-  return melody;
-}
-
 // Function for saving a melody to storage
 function saveMelody(key, tempo, melody) {
   // Save the melody to storage using the key, tempo, and melody
