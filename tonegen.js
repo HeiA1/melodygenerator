@@ -1,4 +1,7 @@
-// Set up the Tone.js context and synthesizer
+//Load html (DOM) before running the js
+document.addEventListener("DOMContentLoaded", function() {
+  // Your JavaScript code goes here
+  // Set up the Tone.js context and synthesizer
 const context = new Tone.Context();
 const synth = new Tone.Synth().toDestination();
 
@@ -9,15 +12,6 @@ const player = document.getElementById("player");
 const startButton = document.getElementById("start-button");
 startButton.addEventListener("click", startAudio);
 
-function startAudio() {
-  // Start the audio context
-  context.resume();
-  // Enable the other buttons and controls
-  document.getElementById("generate-button").disabled = false;
-  document.getElementById("save-button").disabled = false;
-  // etc.
-}
-
 // Set up the button for generating a new melody
 const generateButton = document.getElementById("generate-button");
 generateButton.addEventListener("click", generateMelody);
@@ -27,6 +21,16 @@ generateButton.disabled = true;
 const saveButton = document.getElementById("save-button");
 saveButton.addEventListener("click", saveMelody);
 saveButton.disabled = true;
+});
+
+function startAudio() {
+  // Start the audio context
+  context.resume();
+  // Enable the other buttons and controls
+  document.getElementById("generate-button").disabled = false;
+  document.getElementById("save-button").disabled = false;
+  // etc.
+}
 
 // Generate a new melody
 function generateMelody() {
