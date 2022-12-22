@@ -1,0 +1,62 @@
+<!-- HTML for the layout and structure of the app -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="tonegen.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+<header>
+    <h1>Melody Generator</h1>
+</header>
+<main>
+    <section id="parameters">
+        
+<!-- Form elements for adjusting the various parameters -->
+<form>
+        <label for="key">Key:</label>
+        <select id="key" name="key">
+          <!-- Options for different keys -->
+          <option value="C">C</option>
+          <option value="G">G</option>
+          <option value="D">D</option>
+          <!-- etc. -->
+        </select>
+        <br />
+        <label for="tempo">Tempo:</label>
+        <input
+          type="number"
+          id="tempo"
+          name="tempo"
+          min="60"
+          max="240"
+          value="120"
+        />
+        BPM
+        <br />
+        <!-- etc. -->
+      </form>
+    </section>
+    <section id="visualization">
+      <!-- Container for the visual representation of the generated melody -->
+      <div id="piano-roll"></div>
+    </section>
+    <section id="controls">
+      <!-- Buttons for generating and saving melodies -->
+      <button id="generate-button">Generate</button>
+      <button id="save-button">Save</button>
+    </section>
+  </main>
+  <footer>
+    <!-- Audio player for listening to the generated melody -->
+    <audio id="player" controls></audio>
+  </footer>
+</div>
+</body>
+</html>

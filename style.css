@@ -1,0 +1,25 @@
+
+  #app {
+    width: 800px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  #parameters {
+    flex: 1;
+  }
+  #visualization {
+    flex: 2;
+  }
+  #controls {
+    flex: 1;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+  }
